@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remaja Masjid Nurul Hidayah</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark" data-theme-color="color-1" data-font="'Georgia', serif">
+
+  <!-- Floating Settings -->
+  <div class="floating-settings neumorphic">
+    <button id="settingsToggle" title="Pengaturan">
+      <i class="fas fa-gear rotating-gear"></i>
+    </button>
+    <div class="settings-panel box-inset hidden" id="settingsPanel">
+      <div class="setting-group">
+        <label>Warna Tema</label>
+        <div id="colorSelector" class="color-options">
+          <div class="color-swatch color-1" data-color="color-1"></div>
+          <div class="color-swatch color-2" data-color="color-2"></div>
+          <div class="color-swatch color-3" data-color="color-3"></div>
+          <div class="color-swatch color-4" data-color="color-4"></div>
+          <div class="color-swatch color-5" data-color="color-5"></div>
+        </div>
+      </div>
+      <div class="setting-group">
+        <label for="menuSelector">Menu</label>
+        <select id="menuSelector">
+          <option value="home">Home</option>
+          <option value="about">About</option>
+          <option value="programs">Programs</option>
+          <option value="members">Members</option>
+          <option value="activities">Activities</option>
+          <option value="documentation">Documentation</option>
+          <option value="contact">Contact</option>
+        </select>
+      </div>
+      <div class="setting-group">
+        <label>Font</label>
+        <select id="fontSelector" class="font-toggle">
+          <option value="'Georgia', serif">Georgia</option>
+          <option value="'Roboto', sans-serif">Roboto</option>
+          <option value="'Montserrat', sans-serif">Montserrat</option>
+          <option value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Segoe UI</option>
+          <option value="'Courier New', Courier, monospace">Courier New</option>
+          <option value="'Comic Sans MS', cursive, sans-serif">Comic Sans MS</option>
+          <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+        </select>
+      </div>
+      <div class="setting-group">
+        <label>Tema</label>
+        <select id="themeSelector" class="theme-toggle">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- Floating Settings Ends -->
+
+  <!-- Home Section -->
+  <section id="home" class="section-home box">
+    <h2><i class="fas fa-mosque section-icon"></i>Masjid Nurul Hidayah</h2>
+    <img src="https://picsum.photos/seed/header/300/200" alt="Foto Masjid Nurul Hidayah" class="header-img" />
+    <div class="info-boxes grid">
+    <div id="weather-info"> • • • </div>
+    <br>
+    <div id="date-time"> • • • </div>
+    <br>
+    <div id="random-hadist" class="random-hadist box">
+      <p id="hadist-text"></i> • • • </p>
+      <p id="hadist-source"></i> • • • </p>
+    </div>
+    </div>          
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-about box">
+    <h2><i class="fas fa-info-circle section-icon"></i> Tentang Kami </h2>
+    
+    <p>Ikatan Remaja Masjid Nurul Hidayah</p>
+    
+    <p>Remaja Masjid Nurul Hidayah didirikan pada tahun 2010 sebagai wadah pembinaan dan pengembangan generasi muda Islam yang aktif, kreatif, dan berakhlak mulia. Kami berupaya menjadi motor penggerak kegiatan positif di lingkungan masjid dan masyarakat sekitar.</p>
+    
+    <div class="about-subsection box">
+      <h3><i class="fas fa-eye section-icon"></i> Visi </h3>
+      <p>
+        Mewujudkan remaja Islam yang berilmu, berakhlak, dan berperan aktif dalam membangun masyarakat madani yang berlandaskan nilai-nilai Islami dan piagam Madinah.
+      </p>
+    </div>
+
+    <div class="about-subsection box">
+      <h3><i class="fas fa-bullseye section-icon"></i> Misi </h3>
+      <ul>
+        <li>Meningkatkan pemahaman dan pengamalan ajaran Islam di kalangan remaja.</li>
+        <li>Mengembangkan potensi remaja dalam bidang keilmuan, sosial, dan dakwah.</li>
+        <li>Mendorong keterlibatan aktif dalam kegiatan masjid dan kemasyarakatan.</li>
+        <li>Menanamkan semangat ukhuwah Islamiyah dan kepedulian sosial.</li>
+      </ul>
+    </div>
+
+    <div class="about-subsection box">
+      <h3><i class="fas fa-user-shield section-icon"></i> Pembina Remaja Masjid</h3>
+      <ul>
+        <li><strong>Ust. H. Ahmad Zainuddin, Lc.</strong> – Pembina Utama</li>
+        <li><strong>Bapak H. Ridwan Salim</strong> – Pembina Sosial & Dakwah</li>
+        <li><strong>Ibu Hj. Siti Maryam</strong> – Pembina Keputrian & Pendidikan</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="section-programs box">
+    <h2><i class="fas fa-calendar-alt section-icon"></i> Program Kerja </h2>
+    <p>
+      Kami menyelenggarakan berbagai program seperti kajian rutin, bakti sosial, pelatihan kepemimpinan, tahfidz Al-Qur’an, dan pengembangan diri agar remaja mampu berkontribusi positif bagi umat dan bangsa.
+    </p>
+
+    <div class="program-grid">
+      <div class="program-card box">
+        <i class="fas fa-book-open program-icon"></i>
+        <h3>Kajian Rutin</h3>
+        <p>Pembahasan ilmu agama setiap pekan bersama ustadz/ustadzah lokal maupun tamu.</p>
+      </div>
+      <div class="program-card box">
+        <i class="fas fa-hands-helping program-icon"></i>
+        <h3>Bakti Sosial</h3>
+        <p>Kegiatan sosial seperti santunan yatim, bantuan bencana, dan donor darah.</p>
+      </div>
+      <div class="program-card box">
+        <i class="fas fa-chalkboard-teacher program-icon"></i>
+        <h3>Pelatihan Kepemimpinan</h3>
+        <p>Membentuk karakter pemimpin Islami melalui training, diskusi, dan simulasi.</p>
+      </div>
+      <div class="program-card box">
+        <i class="fas fa-quran program-icon"></i>
+        <h3>Tahfidz Al-Qur’an</h3>
+        <p>Program hafalan dan muroja’ah Al-Qur’an dengan bimbingan pengajar berpengalaman.</p>
+      </div>
+      <div class="program-card box">
+        <i class="fas fa-user-graduate program-icon"></i>
+        <h3>Pengembangan Diri</h3>
+        <p>Kegiatan untuk melatih keterampilan, mental, dan kreativitas remaja Islami.</p>
+      </div>
+      <div class="program-card box">
+        <i class="fas fa-hand-holding-heart program-icon"></i>
+        <h3>Kerja Bakti</h3>
+        <p>Kegiatan mingguan dan bulanan yang diselenggarakan oleh anggota aktif untuk menjaga kebersihan lingkungan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Members Section -->
+  <section id="members" class="section-members box">
+    <h2><i class="fas fa-users section-icon"></i> Anggota </h2>
+    <p>
+      Anggota kami terdiri dari remaja usia 13-25 tahun yang aktif mengikuti kegiatan keagamaan dan sosial. Bersama kami, mereka belajar, bertumbuh, dan berkontribusi untuk lingkungan masjid dan masyarakat sekitar.
+    </p>
+
+    <div class="member-grid">
+      <div class="member-card box">
+        <img src="https://picsum.photos/seed/ketua/200" alt="Ketua Remaja" class="member-photo" />
+        <h3 class="member-name">Ahmad Fauzi</h3>
+        <p class="member-role">Ketua</p>
+        <span class="member-status">Aktif</span>
+      </div>
+      <div class="member-card box">
+        <img src="https://picsum.photos/seed/wakil/200" alt="Wakil Ketua" class="member-photo" />
+        <h3 class="member-name">Nurul Aini</h3>
+        <p class="member-role">Wakil Ketua</p>
+        <span class="member-status">Aktif</span>
+      </div>
+      <div class="member-card box">
+        <img src="https://picsum.photos/seed/sekretaris/200" alt="Sekretaris" class="member-photo" />
+        <h3 class="member-name">Rizky Maulana</h3>
+        <p class="member-role">Sekretaris</p>
+        <span class="member-status">Aktif</span>
+      </div>
+      <div class="member-card box">
+        <img src="https://picsum.photos/seed/bendahara/200" alt="Bendahara" class="member-photo" />
+        <h3 class="member-name">Siti Zahra</h3>
+        <p class="member-role">Bendahara</p>
+        <span class="member-status">Aktif</span>
+      </div>
+      <div class="member-card box">
+        <img src="https://picsum.photos/seed/pembina/200" alt="Pembina" class="member-photo" />
+        <h3 class="member-name">Ust. H. Marwan</h3>
+        <p class="member-role">Pembina</p>
+        <span class="member-status">Aktif</span>
+      </div>
+      <div class="member-card box">
+        <img src="https://picsum.photos/seed/pembina/200" alt="Pembina" class="member-photo" />
+        <h3 class="member-name">Ust. Abdul, Lc.</h3>
+        <p class="member-role">Pembina</p>
+        <span class="member-status">Aktif</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="activities" class="section-activities box">
+    <h2><i class="fas fa-calendar-check section-icon"></i> Kegiatan </h2>
+    <p>Kegiatan rutin dan insidental yang diselenggarakan untuk meningkatkan keimanan dan kepedulian sosial remaja.</p>
+
+    <ul class="activities-list">
+      <li>Pengajian Ahad pagi setiap minggu</li>
+      <li>Pelatihan kepemimpinan remaja bulanan</li>
+      <li>Bakti sosial dan santunan anak yatim</li>
+      <li>Kampanye kebersihan dan penghijauan lingkungan masjid</li>
+      <li>Peringatan hari besar Islam dan kegiatan Ramadan</li>
+    </ul>
+  </section>
+
+  <!-- Documentation Section -->
+  <section id="documentation" class="section-documentation box">
+    <h2><i class="fas fa-camera-retro section-icon"></i> Dokumentasi </h2>
+    <p>Foto dan video kegiatan remaja masjid sebagai dokumentasi dan motivasi.</p>
+
+    <div class="documentation-gallery">
+      <img src="https://picsum.photos/seed/dok1/300/200" alt="Dokumentasi 1" />
+      <img src="https://picsum.photos/seed/dok2/300/200" alt="Dokumentasi 2" />
+      <img src="https://picsum.photos/seed/dok3/300/200" alt="Dokumentasi 3" />
+      <img src="https://picsum.photos/seed/dok4/300/200" alt="Dokumentasi 4" />
+      <img src="https://picsum.photos/seed/dok5/300/200" alt="Dokumentasi 5" />
+      <img src="https://picsum.photos/seed/dok6/300/200" alt="Dokumentasi 6" />
+      <img src="https://picsum.photos/seed/dok7/300/200" alt="Dokumentasi 7" />
+      <img src="https://picsum.photos/seed/dok8/300/200" alt="Dokumentasi 8" />
+      <img src="https://picsum.photos/seed/dok9/300/200" alt="Dokumentasi 9" />
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-contact box">
+    <h2><i class="fas fa-envelope section-icon"></i> Kontak </h2>
+    <p>Hubungi melalui nomor, email, atau datang langsung ke alamat.</p>
+
+    <ul class="contact-info">
+      <li><i class="fas fa-phone"></i>  +62 812 3456 7890</li>
+      <li><i class="fas fa-envelope"></i>  remaja.masjid@info.com</li>
+      <li><i class="fas fa-map-marker-alt"></i>  Jl. Masjid Nurul Hidayah No.10, Tallo, BEB.</li>
+    </ul>
+
+     <form id="contactForm" class="contact-form">
+      <label for="name">Nama</label>
+      <input class="box-inset" type="text" id="name" name="name" placeholder="Nama lengkap" required />
+
+      <label for="email">Email</label>
+      <input class="box-inset" type="email" id="email" name="email" placeholder="Email Anda" required />
+
+      <label for="message">Pesan</label>
+      <textarea class="box-inset" id="message" name="message" rows="4" placeholder="Tulis pesan Anda" required></textarea>
+
+      <button class="neumorphic" type="submit">Kirim</button>
+    </form>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+  <a href="https://artkillers.github.io">© Art Killers • All Rights Reserved.</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

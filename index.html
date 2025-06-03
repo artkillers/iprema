@@ -23,7 +23,7 @@
     </button>
     <div class="settings-panel box-inset hidden" id="settingsPanel">
       <div class="setting-group">
-        <label>Warna Tema</label>
+        <label>Color</label>
         <div id="colorSelector" class="color-options">
           <div class="color-swatch color-1" data-color="color-1"></div>
           <div class="color-swatch color-2" data-color="color-2"></div>
@@ -57,7 +57,7 @@
         </select>
       </div>
       <div class="setting-group">
-        <label>Tema</label>
+        <label>Theme</label>
         <select id="themeSelector" class="theme-toggle">
           <option value="dark">Dark</option>
           <option value="light">Light</option>
@@ -69,8 +69,8 @@
 
   <!-- Home Section -->
   <section id="home" class="section-home box">
-    <h2><i class="fas fa-mosque section-icon"></i>Masjid Nurul Hidayah</h2>
-    <img src="https://picsum.photos/seed/header/300/200" alt="Foto Masjid Nurul Hidayah" class="header-img" />
+    <h2><i class="fas fa-mosque section-icon"></i> Masjid Nurul Hidayah </h2>
+    <img src="image.jpg" alt="Foto Masjid Nurul Hidayah" class="header-img" />
     <div class="info-boxes grid">
     <div id="weather-info"> • • • </div>
     <br>
@@ -109,11 +109,11 @@
     </div>
 
     <div class="about-subsection box">
-      <h3><i class="fas fa-user-shield section-icon"></i> Pembina Remaja Masjid</h3>
+      <h3><i class="fas fa-user-shield section-icon"></i> Pengurus Utama Masjid </h3>
       <ul>
-        <li><strong>Ust. H. Ahmad Zainuddin, Lc.</strong> – Pembina Utama</li>
-        <li><strong>Bapak H. Ridwan Salim</strong> – Pembina Sosial & Dakwah</li>
-        <li><strong>Ibu Hj. Siti Maryam</strong> – Pembina Keputrian & Pendidikan</li>
+        <li><strong>Andi Rahman Sulo</strong> – Ketua</li>
+        <li><strong>Abdul Hamid</strong> – Sekretaris</li>
+        <li><strong>Uncle Unknown</strong> – Bendahara</li>
       </ul>
     </div>
   </section>
@@ -159,51 +159,23 @@
     </div>
   </section>
 
-  <!-- Members Section -->
-  <section id="members" class="section-members box">
-    <h2><i class="fas fa-users section-icon"></i> Anggota </h2>
-    <p>
-      Anggota kami terdiri dari remaja usia 13-25 tahun yang aktif mengikuti kegiatan keagamaan dan sosial. Bersama kami, mereka belajar, bertumbuh, dan berkontribusi untuk lingkungan masjid dan masyarakat sekitar.
-    </p>
-
-    <div class="member-grid">
-      <div class="member-card box">
-        <img src="https://picsum.photos/seed/ketua/200" alt="Ketua Remaja" class="member-photo" />
-        <h3 class="member-name">Ahmad Fauzi</h3>
-        <p class="member-role">Ketua</p>
-        <span class="member-status">Aktif</span>
-      </div>
-      <div class="member-card box">
-        <img src="https://picsum.photos/seed/wakil/200" alt="Wakil Ketua" class="member-photo" />
-        <h3 class="member-name">Nurul Aini</h3>
-        <p class="member-role">Wakil Ketua</p>
-        <span class="member-status">Aktif</span>
-      </div>
-      <div class="member-card box">
-        <img src="https://picsum.photos/seed/sekretaris/200" alt="Sekretaris" class="member-photo" />
-        <h3 class="member-name">Rizky Maulana</h3>
-        <p class="member-role">Sekretaris</p>
-        <span class="member-status">Aktif</span>
-      </div>
-      <div class="member-card box">
-        <img src="https://picsum.photos/seed/bendahara/200" alt="Bendahara" class="member-photo" />
-        <h3 class="member-name">Siti Zahra</h3>
-        <p class="member-role">Bendahara</p>
-        <span class="member-status">Aktif</span>
-      </div>
-      <div class="member-card box">
-        <img src="https://picsum.photos/seed/pembina/200" alt="Pembina" class="member-photo" />
-        <h3 class="member-name">Ust. H. Marwan</h3>
-        <p class="member-role">Pembina</p>
-        <span class="member-status">Aktif</span>
-      </div>
-      <div class="member-card box">
-        <img src="https://picsum.photos/seed/pembina/200" alt="Pembina" class="member-photo" />
-        <h3 class="member-name">Ust. Abdul, Lc.</h3>
-        <p class="member-role">Pembina</p>
-        <span class="member-status">Aktif</span>
-      </div>
-    </div>
+<section id="members" class="section-members box">
+  <h2>
+  <i class="fas fa-users section-icon"></i> Anggota <span id="totalAnggota">( 0 )</span>
+  </h2>
+  <p>
+    Anggota kami terdiri dari remaja usia 15–30 tahun yang aktif mengikuti kegiatan keagamaan dan sosial. Bersama kami, mereka belajar, bertumbuh, dan berkontribusi untuk lingkungan masjid dan masyarakat sekitar.
+  </p>
+  
+  <div class="pagination-controls">
+    <button class="neumorphic" id="prev-btn" disabled>
+    <i class="fas fa-backward"></i>
+    </button>
+    <button class="neumorphic" id="next-btn">
+    <i class="fas fa-forward">
+    </i></button>
+  </div>
+  <div id="member-container" class="member-grid"></div>
   </section>
 
   <!-- Activities Section -->
@@ -226,15 +198,16 @@
     <p>Foto dan video kegiatan remaja masjid sebagai dokumentasi dan motivasi.</p>
 
     <div class="documentation-gallery">
-      <img src="https://picsum.photos/seed/dok1/300/200" alt="Dokumentasi 1" />
-      <img src="https://picsum.photos/seed/dok2/300/200" alt="Dokumentasi 2" />
-      <img src="https://picsum.photos/seed/dok3/300/200" alt="Dokumentasi 3" />
-      <img src="https://picsum.photos/seed/dok4/300/200" alt="Dokumentasi 4" />
-      <img src="https://picsum.photos/seed/dok5/300/200" alt="Dokumentasi 5" />
-      <img src="https://picsum.photos/seed/dok6/300/200" alt="Dokumentasi 6" />
-      <img src="https://picsum.photos/seed/dok7/300/200" alt="Dokumentasi 7" />
-      <img src="https://picsum.photos/seed/dok8/300/200" alt="Dokumentasi 8" />
-      <img src="https://picsum.photos/seed/dok9/300/200" alt="Dokumentasi 9" />
+      <img src="1.jpg" alt="Dokumentasi 1" />
+      <img src="2.jpg" alt="Dokumentasi 2" />
+      <img src="3.jpg" alt="Dokumentasi 3" />
+      <img src="4.jpg" alt="Dokumentasi 4" />
+      <img src="5.jpg" alt="Dokumentasi 5" />
+      <img src="6.jpg" alt="Dokumentasi 6" />
+      <img src="7.jpg" alt="Dokumentasi 7" />
+      <img src="8.jpg" alt="Dokumentasi 8" />
+      <img src="9.jpg" alt="Dokumentasi 9" />
+      <img src="10.jpg" alt="Dokumentasi 10" />
     </div>
   </section>
 
@@ -264,8 +237,8 @@
   </section>
   
   <!-- Footer -->
-  <footer>
-  <a href="https://artkillers.github.io">© Art Killers • All Rights Reserved.</a>
+  <footer class="neumorphic">
+  <a href="https://artkillers.github.io/neumorphic">© Art Killers • All Rights Reserved.</a>
   </footer>
 
   <script src="script.js"></script>

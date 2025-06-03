@@ -79,37 +79,127 @@ document.addEventListener("contextmenu", e => e.preventDefault());
 document.addEventListener("selectstart", e => e.preventDefault());
 document.addEventListener("copy", e => e.preventDefault());
 
-// === Fungsi untuk update waktu secara real-time ===
-function updateDateTime() {
-  const now = new Date();
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  const dateStr = now.toLocaleDateString('id-ID', options);
-  const timeStr = now.toLocaleTimeString('id-ID');
+const members = [
+  // DEWAN SENIOR
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ustad Iskandar", role: "Dewan Senior", status: "Pembina" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Hasrudi Arsyad", role: "Dewan Senior", status: "Pembina" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ramdani Tajjuddin", role: "Dewan Senior", status: "Pembina" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Fachmi Azis", role: "Dewan Senior", status: "Pembina" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhaemin", role: "Dewan Senior", status: "Pembina" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Fachri Azis", role: "Dewan Senior", status: "Pembina" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Asfar Ukkas", role: "Dewan Senior", status: "Pembina" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Irfandi Anas", role: "Dewan Senior", status: "Pembina" },
 
-  const dateTime = document.getElementById("date-time");
-  dateTime.innerHTML = `<i class="fas fa-calendar-alt"></i> ${dateStr}`;
+  // PENGURUS INTI
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Alief Fadel Muhammad", role: "Ketua Umum", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Rifky", role: "Wakil Ketua Umum", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ayyubi Rabbani Aziz", role: "Ketua", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh. Rafliyansyah", role: "Wakil Ketua", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Hadriani Rizky Amalia", role: "Sekretaris", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Arina Rezky Juniastari", role: "Wakil Sekretaris", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Anisa Kalista Nur", role: "Bendahara", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "St. Nur Azizah", role: "Wakil Bendahara", status: "Pengurus" },
+
+  // BIDANG DAKWAH
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Agung Sulo", role: "Dakwah", status: "Koordinator" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Agil Fauzan", role: "Dakwah", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Al Mudatsir", role: "Dakwah", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Syaiful Iskandar", role: "Dakwah", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "M Iqbal Irwan", role: "Dakwah", status: "Anggota" },
+
+  // BIDANG PENDIDIKAN
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sitti Latifah N", role: "Pendidikan", status: "Koordinator" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Aidil Bintang", role: "Pendidikan", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Fahri Husaini", role: "Pendidikan", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Haryati Rina", role: "Pendidikan", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nur Irma Sari", role: "Pendidikan", status: "Anggota" },
+
+  // BIDANG KEWIRAUSAHAAN
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nurul Zaskia Azizah", role: "Kewirausahaan", status: "Koordinator" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Fauzan Ofansyah", role: "Kewirausahaan", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Dian Almahri", role: "Kewirausahaan", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Aqilah Syahrani", role: "Kewirausahaan", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nawal Majida", role: "Kewirausahaan", status: "Anggota" },
+
+  // BIDANG HUMAS
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhammad Arsy Firdaus", role: "Humas", status: "Koordinator" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Rahman", role: "Humas", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Iswandi Ajis Baco S.E", role: "Humas", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Abdul Wahab Kemal", role: "Humas", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Febriadi Bachtiar", role: "Humas", status: "Anggota" },
+
+  // BIDANG PDD
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Arman Maulana", role: "PDD", status: "Koordinator" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Am Fadel Aziz", role: "PDD", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Takdir Haris", role: "PDD", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andas Abbas", role: "PDD", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Nur Indah Sulo", role: "PDD", status: "Anggota" },
+
+  // BIDANG OLAHRAGA DAN SENI
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhammad Iman Syahudi", role: "Olahraga & Seni", status: "Koordinator" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Ricky", role: "Olahraga & Seni", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sulkifli", role: "Olahraga & Seni", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Syafiradi", role: "Olahraga & Seni", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Safaruddin", role: "Olahraga & Seni", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Yusril Aksan", role: "Olahraga & Seni", status: "Anggota" },
+
+  // BIDANG PENANGGULANGAN BENCANA
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sunaryo", role: "Penanggulangan Bencana", status: "Koordinator" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Siti Wahyuni", role: "Penanggulangan Bencana", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Yusuf Saputra", role: "Penanggulangan Bencana", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andy Aksyal Nurdiansyah", role: "Penanggulangan Bencana", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Agus Salim", role: "Penanggulangan Bencana", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ismail (Abay)", role: "Penanggulangan Bencana", status: "Anggota" },
+  // BIDANG SAINS & TEKNOLOGI 
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Art Man", role: "Sains & Teknologi", status: "Enthusiast Arts" }
+];
+
+document.getElementById("totalAnggota").textContent = `( ${members.length} )`;
+
+const membersPerPage = 4;
+let currentPage = 0;
+
+function renderMembers() {
+  const container = document.getElementById('member-container');
+  container.innerHTML = "";
+
+  const start = currentPage * membersPerPage;
+  const end = start + membersPerPage;
+  const currentMembers = members.slice(start, end);
+  const defaultPhoto = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
+
+  currentMembers.forEach(member => {
+    const card = document.createElement('div');
+    card.className = 'member-card box';
+    card.innerHTML = `
+      <img src="${member.photo || defaultPhoto}" alt="${member.name}" class="member-photo" />
+      <h3 class="member-name">${member.name}</h3>
+      <p class="member-role">${member.role}</p>
+      <span class="member-status">${member.status}</span>
+    `;
+    container.appendChild(card);
+  });
+
+  document.getElementById('prev-btn').disabled = currentPage === 0;
+  document.getElementById('next-btn').disabled = end >= members.length;
 }
 
-setInterval(updateDateTime, 1000);
-
-// === Fungsi ambil cuaca dari Open-Meteo ===
-async function fetchWeather() {
-  try {
-    const lat = -6.2, lon = 106.8; // Jakarta
-    const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weathercode&timezone=auto`);
-    const data = await res.json();
-
-    const temp = Math.round(data.current.temperature_2m);
-    const weatherInfo = document.getElementById("weather-info");
-
-    // Icon default sementara
-    weatherInfo.innerHTML = `<i class="fas fa-cloud-sun"></i> ${temp}°C`;
-  } catch (e) {
-    document.getElementById("weather-info").textContent = "Gagal memuat cuaca.";
+document.getElementById('prev-btn').addEventListener('click', () => {
+  if (currentPage > 0) {
+    currentPage--;
+    renderMembers();
   }
-}
+});
 
-// Random Hadist dengan Fallback
+document.getElementById('next-btn').addEventListener('click', () => {
+  if ((currentPage + 1) * membersPerPage < members.length) {
+    currentPage++;
+    renderMembers();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', renderMembers);
+
 const fallbackHadist = [
   { text: "Barangsiapa menempuh jalan untuk mencari ilmu, Allah akan mudahkan baginya jalan ke surga.", source: "HR. Muslim" },
   { text: "Amal itu tergantung pada niatnya.", source: "HR. Bukhari & Muslim" },
@@ -182,7 +272,38 @@ async function loadHadist() {
   }
 }
 
+// === Fungsi ambil cuaca dari Open-Meteo ===
+async function fetchWeather() {
+  try {
+    const lat = -6.2, lon = 106.8; // Jakarta
+    const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weathercode&timezone=auto`);
+    const data = await res.json();
+
+    const temp = Math.round(data.current.temperature_2m);
+    const weatherInfo = document.getElementById("weather-info");
+
+    // Icon default sementara
+    weatherInfo.innerHTML = `<i class="fas fa-cloud-sun"></i> ${temp}°C`;
+  } catch (e) {
+    document.getElementById("weather-info").textContent = "Gagal memuat cuaca.";
+  }
+}
+
+// === Fungsi untuk update waktu secara real-time ===
+function updateDateTime() {
+  const now = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateStr = now.toLocaleDateString('id-ID', options);
+  const timeStr = now.toLocaleTimeString('id-ID');
+
+  const dateTime = document.getElementById("date-time");
+  dateTime.innerHTML = `<i class="fas fa-calendar-alt"></i> ${dateStr}`;
+}
+
+setInterval(updateDateTime, 1000);
+
 // Jalankan saat halaman dimuat
 loadHadist();
 fetchWeather();
 updateDateTime();
+

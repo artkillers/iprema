@@ -73,7 +73,7 @@ body.light .neumorphic:active {
 
 /* ===== BOXES ===== */
 .box {
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: var(--radius);
   background: var(--bg-light);
@@ -259,7 +259,7 @@ li {
 
 .documentation-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 10px;
 }
@@ -340,6 +340,50 @@ body.dark .member-role {
 body.dark .member-status {
   color: var(--text-dark);
   background-color: var(--bg-dark);
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.member-card {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--bg-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-out-light);
+  transition: background-color 0.3s;
+}
+
+body.dark .member-card {
+  background-color: var(--bg-dark);
+  box-shadow: var(--shadow-out-dark);
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pagination-controls button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--theme-color);
+  color: var(--theme-color);
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.7;
+  cursor: default;
 }
 
 /* PROGRAM GRID */
@@ -460,6 +504,16 @@ footer a {
   cursor: pointer;
 }
 
+/* ROTATING GEAR */
+.rotating-gear {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
   body {
@@ -474,12 +528,4 @@ footer a {
   }
 }
 
-/* ROTATING GEAR */
-.rotating-gear {
-  animation: spin 3s linear infinite;
-}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}

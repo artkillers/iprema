@@ -661,7 +661,7 @@ footer a {
 
 /* ===== MODE DESKTOP ===== */
 
-@media (min-width: 741px) and (max-width: 800px) {
+@media (min-width: 741px) {
   body {
     padding: 2rem 3rem;
     font-size: 18px;

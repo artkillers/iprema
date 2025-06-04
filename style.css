@@ -160,7 +160,6 @@ li {
   border-radius: var(--radius);
   object-fit: cover;
   margin-bottom: 20px;
-  transform: scale(1.05);
 }
 
 #prayer-weather-box {
@@ -663,12 +662,82 @@ footer a {
 
 @media (min-width: 741px) {
   body {
-    padding: 2rem 3rem;
-    font-size: 18px;
-  } 
+  font-family: var(--font-main);
+  color: var(--theme-color);
+  background-color: var(--bg-dark);
+  line-height: 1.5;
+  padding: 2rem 3rem;
+  min-height: 270vh;
+  transition: all 0.3s ease, color 0.3s ease;
+  }
+
+  body.light {
+    background-color: var(--bg-light);
+    color: var(--theme-color);
+  }
   
-  h2, h3 {
-    font-size: 20px;
+  html {
+  scroll-behavior: smooth;
+  }
+
+  h2 {
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 17px;
+    color: var(--theme-color);
+  }
+  
+  h3 {
+    gap: 20px;
+    font-size: 15px;
+  }
+
+  .section-icon {
+    color: var(--theme-color);
+  }
+
+  p, ul, li {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--text-light);
+  }
+
+  body.dark p,
+  body.dark ul,
+  body.dark li {
+    color: var(--text-dark);
+  }
+
+  ul {
+    padding-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  .section-home {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .section-home h2 {
+    margin-bottom: 30px;
+  }
+
+  .header-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+    margin-bottom: 20px;
   }
   
   .program-grid,
@@ -678,14 +747,14 @@ footer a {
     margin-top: 1rem;
     gap: 1rem;
   }
-
+  
   .settings-panel {
     width: 320px;
   }
   
   .floating-settings {
-    top: 55px;
-    right: 72px;
+    top: 70px;
+    right: 80px;
     font-size: 20px;
     padding: 20px;
   }
@@ -701,8 +770,9 @@ footer a {
   }
   
   .popup-content {
-    width: 1000px;
-    max-height: 90vh;
+    width: 70%;
+    max-width: 90%;
+    max-height: 90vh; 
     overflow-y: auto;
   }
 }

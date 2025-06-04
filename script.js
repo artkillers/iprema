@@ -92,11 +92,11 @@ const members = [
 
   // PENGURUS INTI
   { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Alief Fadel Muhammad", role: "Ketua Umum", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Rifky", role: "Wakil Ketua Umum", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ayyubi Rabbani Aziz", role: "Ketua", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh. Rafliyansyah", role: "Wakil Ketua", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Hadriani Rizky Amalia", role: "Sekretaris", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Arina Rezky Juniastari", role: "Wakil Sekretaris", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Rifky", role: "Ketua I", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ayyubi Rabbani Aziz", role: "Ketua II", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Hadriani Rizky Amalia", role: "Sekretaris Umum", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Arina Rezky Juniastari", role: "Sekretaris I", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh. Rafliyansyah", role: "Sekretaris II", status: "Pengurus" },
   { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Anisa Kalista Nur", role: "Bendahara", status: "Pengurus" },
   { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "St. Nur Azizah", role: "Wakil Bendahara", status: "Pengurus" },
 
@@ -251,7 +251,20 @@ const fallbackHadist = [
   { text: "Ketakwaan itu di sini (sambil menunjuk ke dada).", source: "HR. Muslim" },
   { text: "Orang yang berjalan untuk menolong saudaranya lebih aku cintai daripada beri’tikaf di masjid ini selama sebulan.", source: "HR. Thabrani" }
 ];
+/*
+function showRandomHadist() {
+  const index = Math.floor(Math.random() * fallbackHadist.length);
+  const hadist = fallbackHadist[index];
 
+  document.getElementById("hadist-text").textContent = hadist.text;
+  document.getElementById("hadist-source").textContent = hadist.source;
+}
+
+document.getElementById("random-hadist").addEventListener("click", showRandomHadist);
+
+// Tampilkan satu hadist saat pertama kali halaman dimuat
+document.addEventListener("DOMContentLoaded", showRandomHadist);
+*/
 async function loadHadist() {
   try {
     const res = await fetch("#", {

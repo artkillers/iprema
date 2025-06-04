@@ -156,7 +156,7 @@ const members = [
 
 document.getElementById("totalAnggota").textContent = `( ${members.length} )`;
 
-const membersPerPage = 4;
+const membersPerPage = 6;
 let currentPage = 0;
 
 function renderMembers() {
@@ -296,7 +296,7 @@ async function fetchWeather() {
     const weatherInfo = document.getElementById("weather-info");
 
     // Icon default sementara
-    weatherInfo.innerHTML = `<i class="fas fa-cloud-sun"></i> ${temp}°C`;
+    weatherInfo.innerHTML = ` ${temp}°C `;
   } catch (e) {
     document.getElementById("weather-info").textContent = "Gagal memuat cuaca.";
   }
@@ -310,7 +310,7 @@ function updateDateTime() {
   const timeStr = now.toLocaleTimeString('id-ID');
 
   const dateTime = document.getElementById("date-time");
-  dateTime.innerHTML = `<i class="fas fa-calendar-alt"></i> ${dateStr}`;
+  dateTime.innerHTML = ` ${dateStr} `;
 }
 
 setInterval(updateDateTime, 1000);

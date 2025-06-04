@@ -92,14 +92,14 @@
     <p>Remaja Masjid Nurul Hidayah didirikan pada tahun 2010 sebagai wadah pembinaan dan pengembangan generasi muda Islam yang aktif, kreatif, dan berakhlak mulia. Kami berupaya menjadi motor penggerak kegiatan positif di lingkungan masjid dan masyarakat sekitar.</p>
     
     <div class="about-subsection box-inout">
-      <h3><i class="fas fa-eye section-icon"></i> Visi </h3>
+      <h2><i class="fas fa-eye section-icon"></i> Visi </h2>
       <p>
         Mewujudkan remaja Islam yang berilmu, berakhlak, dan berperan aktif dalam membangun masyarakat madani yang berlandaskan nilai-nilai Islami dan piagam Madinah.
       </p>
     </div>
 
     <div class="about-subsection box-inout">
-      <h3><i class="fas fa-bullseye section-icon"></i> Misi </h3>
+      <h2><i class="fas fa-bullseye section-icon"></i> Misi </h2>
       <ul>
         <li>Meningkatkan pemahaman dan pengamalan ajaran Islam di kalangan remaja.</li>
         <li>Mengembangkan potensi remaja dalam bidang keilmuan, sosial, dan dakwah.</li>
@@ -109,7 +109,7 @@
     </div>
 
     <div class="about-subsection box-inout">
-      <h3><i class="fas fa-user-shield section-icon"></i> Pengurus Utama Masjid </h3>
+      <h2><i class="fas fa-user-shield section-icon"></i> Pengurus Utama Masjid </h2>
       <ul>
         <li><strong>Imam Masjid Nurul Hidayah</strong>  –  Penasehat</li>      
          <li><strong>Drs. Mahmud Madja</strong>  –  Badan Jama'ah</li>
@@ -173,7 +173,7 @@
   <p>
     Anggota kami terdiri dari remaja usia 15–30 tahun yang aktif mengikuti kegiatan keagamaan dan sosial. Bersama kami, mereka belajar, bertumbuh, dan berkontribusi untuk lingkungan masjid dan masyarakat sekitar.
   </p>
-  
+  <div id="member-container" class="member-grid"></div>
   <div class="pagination-controls">
     <button class="neumorphic" id="prev-btn" disabled>
     <i class="fas fa-backward"></i>
@@ -182,7 +182,6 @@
     <i class="fas fa-forward">
     </i></button>
   </div>
-  <div id="member-container" class="member-grid"></div>
   </section>
 
   <!-- Programs Section -->
@@ -244,7 +243,7 @@
     <h2><i class="fas fa-camera-retro section-icon"></i> Dokumentasi </h2>
     <p>Foto dan video kegiatan remaja masjid sebagai dokumentasi dan motivasi.</p>
 
-    <div class="documentation-gallery">
+    <div class="documentation-grid">
       <img src="1.jpg" alt="Dokumentasi 1" />
       <img src="2.jpg" alt="Dokumentasi 2" />
       <img src="3.jpg" alt="Dokumentasi 3" />
@@ -287,7 +286,8 @@
   <footer class="neumorphic">
   <a href="https://artkillers.github.io">© Art Killers • All Rights Reserved.</a>
   </footer>
-
+  <div id="desktop-warning" class="hidden">
+  
 <script src="script.js"></script>
 <script>
   const showBtn = document.getElementById('showMorePengurus');
@@ -320,5 +320,6 @@
   // Tombol "Back" Android (tangani jika PWA / SPA)
   window.addEventListener('popstate', closePopup);
 </script>
+
 </body>
 </html>

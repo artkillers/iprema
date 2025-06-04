@@ -1,6 +1,8 @@
 /* ===== GLOBAL BASE ===== */
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent; 
   -webkit-user-select: none; 
   user-select: none;
@@ -28,6 +30,7 @@
 }
 
 /* ===== BODY ===== */
+
 body {
   font-family: var(--font-main);
   color: var(--theme-color);
@@ -43,7 +46,8 @@ body.light {
   color: var(--theme-color);
 }
 
-/* ===== NEUMORPHIC SECTION ===== */
+/* ===== NEUMORPHIC ===== */
+
 .neumorphic {
   border-radius: var(--radius);
   transition: all 0.2s ease-in-out;
@@ -64,6 +68,7 @@ body.light .neumorphic:active {
 }
 
 /* ===== BOXES ===== */
+
 .box-inout {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -164,17 +169,24 @@ li {
   border-radius: var(--radius);
 }
 
-/* MEMBER CARDS */
+/* MEMBER GRID */
+
 #member-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  min-height: 420px; /* 2 card x 160px + gap */
+  min-height: 640px; 
   transition: all 0.3s ease;
 }
 
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
 .member-card {
-  height: 200px; /* atau sesuai kebutuhanmu */
+  height: 200px; 
   flex-direction: column;
   text-align: center;
   padding: 0.5rem 0.5rem 1rem;
@@ -194,6 +206,7 @@ body.dark .member-card {
   max-width: 70px;
   border-radius: 50%;
   object-fit: cover;
+  margin-top: 0.4rem;
   margin-bottom: 0.6rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
@@ -228,13 +241,6 @@ body.dark .member-status {
   background-color: var(--bg-dark);
 }
 
-.member-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
 .pagination-controls {
   display: flex;
   justify-content: center;
@@ -259,12 +265,13 @@ body.dark .member-status {
 }
 
 /* PROGRAM GRID */
+
 .program-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  pedding: 1rem;
   gap: 1rem;
 }
-
 .program-card {
   text-align: center;
   padding: 1rem;
@@ -292,16 +299,15 @@ body.dark .program-card {
   color: var(--theme-color);
 }
 
-/* Documentation */
+/* DOCUMENTATION GRID */
 
-.documentation-gallery {
+.documentation-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 10px;
+  gap: 1rem;
 }
 
-.documentation-gallery img {
+.documentation-grid img {
   width: 100%;
   height: auto;
   border-radius: var(--radius);
@@ -311,11 +317,11 @@ body.dark .program-card {
   cursor: pointer;
 }
 
-body.dark .documentation-gallery img {
+body.dark .documentation-grid img {
   box-shadow: var(--shadow-out-dark);
 }
  
-.documentation-gallery img:hover {
+.documentation-grid img:hover {
   transform: scale(1.05);
 }
 
@@ -334,14 +340,12 @@ body.dark .contact-form {
   color: var(--theme-color);
 }
 
-/* Label */
 .contact-form label {
   font-size: 10px;
   font-weight: bold;
   margin-bottom: 0.25rem;
 }
 
-/* Input dan Textarea */
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem 1rem;
@@ -362,7 +366,6 @@ body.dark .contact-form textarea {
   box-shadow: var(--shadow-inset-dark);
 }
 
-/* Hover */
 .contact-form input:hover,
 .contact-form textarea:hover {
   box-shadow: inset 4px 4px 8px #b0b0b0, inset -4px -4px 8px #ffffff;
@@ -373,7 +376,6 @@ body.dark .contact-form textarea:hover {
   box-shadow: inset 4px 4px 8px #141414, inset -4px -4px 8px #2c2c2c;
 }
 
-/* Active */
 .contact-form input:active,
 .contact-form textarea:active {
   box-shadow: var(--shadow-inset-light);
@@ -384,7 +386,6 @@ body.dark .contact-form textarea:active {
   box-shadow: var(--shadow-inset-dark);
 }
 
-/* Button */
 .contact-form button {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -407,12 +408,10 @@ body.dark .contact-form button {
   box-shadow: var(--shadow-out-dark);
 }
 
-/* Hover Button */
 .contact-form button:hover {
   filter: brightness(0.95);
 }
 
-/* Active Button */
 .contact-form button:active {
   box-shadow: var(--shadow-inset-light);
   transform: scale(0.98);
@@ -429,7 +428,8 @@ body.dark .contact-form button:active {
   outline: none;
 }
 
-/* Tombol Pop-up Overlay */
+/* ===== POP UP ===== */
+
 .pop-btn {
   padding: 10px 20px;
   font-family: var(--font-main);
@@ -447,7 +447,6 @@ body.dark .pop-btn {
   box-shadow: var(--shadow-out-dark);
 }
 
-/* Popup Overlay */
 .popup-overlay {
   position: fixed;
   inset: 0;
@@ -467,7 +466,6 @@ body.dark .popup-overlay {
   display: none;
 }
 
-/* Popup Content */
 .popup-content {
   background: var(--bg-light);
   color: var(--theme-color);
@@ -480,12 +478,13 @@ body.dark .popup-overlay {
   max-width: 300px;
   width: 100%;
 }
+
 body.dark .popup-content {
   background: var(--bg-dark);
   color: var(--theme-color);
   box-shadow: var(--shadow-out-dark);
 }
-/* Close Button */
+
 .popup-close {
   position: absolute;
   top: 1rem;
@@ -497,12 +496,13 @@ body.dark .popup-content {
   color: var(--theme-color);
   cursor: pointer;
 }
-/* Lock scroll saat popup terbuka */
+
 body.popup-open {
   overflow: hidden;
 }
 
 /* ===== FLOATING SETTINGS ===== */
+
 .floating-settings {
   position: fixed;
   top: 30px;
@@ -598,7 +598,6 @@ body.light .setting-group select {
   line-height: 1.4;
 }
 
-/* ROTATING GEAR */
 .rotating-gear {
   animation: spin 3s linear infinite;
 }
@@ -609,6 +608,7 @@ body.light .setting-group select {
 }
 
 /* ===== FOOTER ===== */
+
 footer {
   text-align: center;
   padding: 1rem 0;
@@ -624,18 +624,85 @@ footer a {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
+/* ===== MODE MOBILE  ===== */
+
+@media (max-width: 640px) {
   body {
-    padding: 0.8rem;
+    padding: 1rem;
   }
   .program-grid,
-  .member-grid {
+  .member-grid,
+  .documentation-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .settings-panel {
-    width: 180px;
+    width: 170px;
   }
 }
 
+/* ===== MODE TABLET ===== */
 
+@media (min-width: 641px) and (max-width: 740px) {
+  body {
+    padding: 1rem;
+  }
+
+  .program-grid,
+  .member-grid,
+  .documentation-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .settings-panel {
+    width: 240px;
+  }
+}
+
+/* ===== MODE DESKTOP ===== */
+
+@media (min-width: 741px) and (max-width: 800px) {
+  body {
+    padding: 2rem 3rem;
+    font-size: 18px;
+  } 
+  
+  h2, h3 {
+    font-size: 20px;
+  }
+  
+  .program-grid,
+  .member-grid,
+  .documentation-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .settings-panel {
+    width: 320px;
+  }
+  
+  .floating-settings {
+    top: 55px;
+    right: 72px;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  #member-container {
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 500px;
+    gap: 1rem;
+  }
+
+  .member-card {
+    height: 220px;
+  }
+  
+  .popup-content {
+    width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}

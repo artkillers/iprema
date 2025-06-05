@@ -149,9 +149,7 @@ const members = [
   { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Yusuf Saputra", role: "Penanggulangan Bencana", status: "Anggota" },
   { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andy Aksyal Nurdiansyah", role: "Penanggulangan Bencana", status: "Anggota" },
   { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Agus Salim", role: "Penanggulangan Bencana", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ismail (Abay)", role: "Penanggulangan Bencana", status: "Anggota" },
-  // BIDANG SAINS & TEKNOLOGI 
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Art Man", role: "Sains & Teknologi", status: "Enthusiast Arts" }
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ismail (Abay)", role: "Penanggulangan Bencana", status: "Anggota" }
 ];
 
 document.getElementById("totalAnggota").textContent = `( ${members.length} )`;

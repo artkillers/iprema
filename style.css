@@ -168,7 +168,7 @@ li {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  min-height: 640px; 
+  min-height: 420px; 
   transition: all 0.3s ease;
 }
 
@@ -199,8 +199,8 @@ body.dark .member-card {
   max-width: 70px;
   border-radius: 50%;
   object-fit: cover;
-  margin-top: 0.4rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
@@ -262,12 +262,10 @@ body.dark .member-status {
 .program-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  pedding: 1rem;
   gap: 1rem;
 }
 .program-card {
   text-align: center;
-  padding: 1rem;
   border-radius: var(--radius);
   background-color: var(--bg-light);
   box-shadow: var(--shadow-out-light);
@@ -282,12 +280,14 @@ body.dark .program-card {
 .program-icon {
   font-size: 2.5rem;
   color: var(--theme-color);
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .program-card h3 {
   font-size: 10px;
   font-weight: 700;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   color: var(--theme-color);
 }
@@ -623,11 +623,14 @@ footer a {
   body {
     padding: 1rem;
   }
+  
   .program-grid,
   .member-grid,
   .documentation-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
+
   .settings-panel {
     width: 170px;
   }
@@ -638,6 +641,24 @@ footer a {
 @media (min-width: 641px) and (max-width: 740px) {
   body {
     padding: 1rem;
+    min-height: 120vh;
+  }
+
+.header-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+  #member-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    min-height: 420px; 
+    transition: all 0.3s ease;
   }
 
   .program-grid,
@@ -650,86 +671,35 @@ footer a {
   .settings-panel {
     width: 240px;
   }
+
+  .floating-settings {
+    top: 70px;
+    right: 70px;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .member-card {
+    height: 220px;
+  }
+
+  .popup-content {
+    width: 60%;
+    max-width: 70%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }
 
 /* ===== MODE DESKTOP ===== */
 
 @media (min-width: 741px) {
-
-* {
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; 
-  -webkit-user-select: none; 
-  user-select: none;
-}
-
-body {
-  font-family: var(--font-main);
-  color: var(--theme-color);
-  background-color: var(--bg-dark);
-  line-height: 1.6;
-  padding: 2rem;
-  min-height: 170vh;
-  transition: all 0.3s ease, color 0.3s ease;
-}
-
-body.light {
-  background-color: var(--bg-light);
-  color: var(--theme-color);
-}
+  body {
+    padding: 1rem;
+    min-height: 100vh;
+  }
   
-html {
-  scroll-behavior: smooth;
-}
-
-h2 {
-  font-weight: 300;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 20px;
-  color: var(--theme-color);
-}
-
-.section-icon {
-  color: var(--theme-color);
-}
-
-p, ul, li {
-  font-size: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: var(--text-light);
-}
-
-body.dark p,
-body.dark ul,
-body.dark li {
-  color: var(--text-dark);
-}
-
-ul {
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-li {
-  margin-bottom: 0.3rem;
-}
-
-.section-home {
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.section-home h2 {
-  margin-bottom: 30px;
-}
-
+  
 .header-img {
   width: 100%;
   max-width: 100%;
@@ -739,39 +709,27 @@ li {
   margin-bottom: 20px;
 }
   
+  #member-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    min-height: 420px; 
+    transition: all 0.3s ease;
+  }
+
   .program-grid,
   .member-grid,
   .documentation-grid {
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 1rem;
     gap: 1rem;
   }
-  
+
   .settings-panel {
     width: 280px;
   }
-  
-  .floating-settings {
-    top: 70px;
-    right: 70px;
-    font-size: 20px;
-    padding: 20px;
-  }
 
-  #member-container {
-    grid-template-columns: repeat(3, 1fr);
-    min-height: 500px;
-    gap: 1rem;
-  }
-
-  .member-card {
-    height: 220px;
-  }
-  
   .popup-content {
-    width: 50%;
-    max-width: 70%;
-    max-height: 90vh; 
-    overflow-y: auto;
+    width: 40%;
+    max-width: 60%;
   }
 }

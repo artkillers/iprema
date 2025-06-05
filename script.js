@@ -249,20 +249,7 @@ const fallbackHadist = [
   { text: "Ketakwaan itu di sini (sambil menunjuk ke dada).", source: "HR. Muslim" },
   { text: "Orang yang berjalan untuk menolong saudaranya lebih aku cintai daripada beri’tikaf di masjid ini selama sebulan.", source: "HR. Thabrani" }
 ];
-/*
-function showRandomHadist() {
-  const index = Math.floor(Math.random() * fallbackHadist.length);
-  const hadist = fallbackHadist[index];
 
-  document.getElementById("hadist-text").textContent = hadist.text;
-  document.getElementById("hadist-source").textContent = hadist.source;
-}
-
-document.getElementById("random-hadist").addEventListener("click", showRandomHadist);
-
-// Tampilkan satu hadist saat pertama kali halaman dimuat
-document.addEventListener("DOMContentLoaded", showRandomHadist);
-*/
 async function loadHadist() {
   try {
     const res = await fetch("#", {

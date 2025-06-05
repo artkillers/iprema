@@ -122,26 +122,16 @@ h2 {
   color: var(--theme-color);
 }
 
-p, ul, li {
+p {
+  gap: 1rem;
   font-size: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
   color: var(--text-light);
 }
 
-body.dark p,
-body.dark ul,
-body.dark li {
+body.dark p {
   color: var(--text-dark);
-}
-
-ul {
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-li {
-  margin-bottom: 0.3rem;
 }
 
 .section-home {
@@ -331,6 +321,11 @@ body.dark .documentation-grid img {
 
 body.dark .contact-form {
   color: var(--theme-color);
+}
+
+.contact-info i {
+  gap: 1rem;
+  margin-right: 10px;
 }
 
 .contact-form label {
@@ -651,7 +646,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: 24px;
   color: var(--theme-color);
 }
 
@@ -659,26 +654,15 @@ h2 {
   color: var(--theme-color);
 }
 
-p, ul, li {
+p {
   font-size: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
   color: var(--text-light);
 }
 
-body.dark p,
-body.dark ul,
-body.dark li {
+body.dark p {
   color: var(--text-dark);
-}
-
-ul {
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-li {
-  margin-bottom: 0.3rem;
 }
 
 .section-home {
@@ -687,7 +671,7 @@ li {
 }
 
 .section-home h2 {
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: 24px;
   margin-bottom: 30px;
 }
 
@@ -753,7 +737,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: 24px;
   color: var(--theme-color);
 }
 
@@ -761,26 +745,15 @@ h2 {
   color: var(--theme-color);
 }
 
-p, ul, li {
+p {
   font-size: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
   color: var(--text-light);
 }
 
-body.dark p,
-body.dark ul,
-body.dark li {
+body.dark p {
   color: var(--text-dark);
-}
-
-ul {
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
-}
-
-li {
-  margin-bottom: 0.3rem;
 }
 
 .section-home {
@@ -789,7 +762,7 @@ li {
 }
 
 .section-home h2 {
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: 24px;
   margin-bottom: 30px;
 }
 

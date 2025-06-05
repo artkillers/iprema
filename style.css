@@ -108,25 +108,31 @@ html {
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
   font-size: 20px;
   color: var(--theme-color);
 }
 
-.section-icon {
+h3 {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
   color: var(--theme-color);
 }
 
 p {
   gap: 1rem;
   font-size: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   color: var(--text-light);
 }
 
@@ -134,13 +140,13 @@ body.dark p {
   color: var(--text-dark);
 }
 
+.section-icon {
+  color: var(--theme-color);
+}
+
 .section-home {
   padding: 20px;
   border-radius: 20px;
-}
-
-.section-home h2 {
-  margin-bottom: 30px;
 }
 
 .header-img {
@@ -274,7 +280,7 @@ body.dark .program-card {
   margin-bottom: 0.5rem;
 }
 
-.program-card h3 {
+.program-card h2 {
   font-size: 10px;
   font-weight: 700;
   margin-top: 0.5rem;
@@ -640,7 +646,7 @@ footer a {
   }
 
 h2 {
-  font-weight: 300;
+  font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -671,8 +677,14 @@ body.dark p {
 }
 
 .section-home h2 {
-  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  color: var(--theme-color);
 }
 
 .header-img {
@@ -684,12 +696,28 @@ body.dark p {
   margin-bottom: 20px;
 }
 
+.contact-info i {
+  gap: 1rem;
+  margin-right: 10px;
+}
+
   #member-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     min-height: 420px; 
     transition: all 0.3s ease;
+  }
+  
+  .member-card {
+    height: 220px; 
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem 0.5rem 1rem;
+    background-color: var(--bg-light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-out-light);
+    transition: background-color 0.3s;
   }
 
   .program-grid,
@@ -731,7 +759,7 @@ body.dark p {
   }
   
 h2 {
-  font-weight: 300;
+  font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -762,8 +790,14 @@ body.dark p {
 }
 
 .section-home h2 {
-  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  color: var(--theme-color);
 }
 
 .header-img {
@@ -774,6 +808,11 @@ body.dark p {
   object-fit: cover;
   margin-bottom: 20px;
 }
+
+.contact-info i {
+  gap: 1rem;
+  margin-right: 10px;
+}
   
   #member-container {
     display: grid;
@@ -781,6 +820,17 @@ body.dark p {
     gap: 1rem;
     min-height: 420px; 
     transition: all 0.3s ease;
+  }
+  
+  .member-card {
+    height: 220px; 
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem 0.5rem 1rem;
+    background-color: var(--bg-light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-out-light);
+    transition: background-color 0.3s;
   }
 
   .program-grid,

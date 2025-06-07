@@ -1,4 +1,4 @@
-/* ===== GLOBAL BASE ===== */
+
 * {
   margin: 0; 
   padding: 0; 
@@ -22,7 +22,7 @@
   --bg-dark: #1e1e1e;
   --text-light: #1e1e1e;
   --text-dark: #e0e0e0;
-  --radius: 12px;
+  --radius: 14px;
   --shadow-inset-light: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
   --shadow-inset-dark: inset 4px 4px 8px #141414, inset -4px -4px 8px #2c2c2c;
   --shadow-out-light: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
@@ -38,19 +38,20 @@ body {
   line-height: 1.6;
   padding: 2rem;
   min-height: 170vh; 
-  transition: all 0.3s ease, color 0.3s ease;
+  transition: all color 0.3s ease;
 }
 
 body.light {
   background-color: var(--bg-light);
   color: var(--theme-color);
+  transition: all color 0.3s ease;
 }
 
 /* ===== NEUMORPHIC ===== */
 
 .neumorphic {
   border-radius: var(--radius);
-  transition: all 0.2s ease-in-out;
+  transition: all color 0.3s ease;
 }
 body.light .neumorphic {
   background: var(--bg-light);
@@ -78,7 +79,7 @@ body.light .neumorphic:active {
   border-radius: var(--radius);
   background: var(--bg-light);
   box-shadow: var(--shadow-out-light);
-  transition: background 0.3s ease;
+  transition: all color 0.3s ease;
 }
 body.dark .box-inout {
   background: var(--bg-dark);
@@ -94,7 +95,7 @@ body.dark .box-inout {
   border-radius: var(--radius);
   background: var(--bg-light);
   box-shadow: var(--shadow-inset-light);
-  transition: all 0.2s ease-in-out;
+  transition: all color 0.3s ease;
 }
 body.dark .box-inset {
   background: var(--bg-dark);
@@ -113,40 +114,73 @@ h2 {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 20px;
   font-size: 20px;
   color: var(--theme-color);
 }
 
 h3 {
-  font-weight: 700;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  align-items: center;
-  text-align: center;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem
+  gap: 10px;
   font-size: 10px;
+  text-align: center;
   color: var(--theme-color);
 }
 
 p {
-  gap: 1rem;
+  font-weight: 400;
   font-size: 10px;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
   color: var(--text-light);
+  gap: 1rem;
 }
 
 body.dark p {
   color: var(--text-dark);
 }
 
+span { 
+  font-weight: 400; 
+  font-size: 10px;
+  color: var(--text-light);
+  gap: 1rem;
+} 
+
+body.dark span {
+  color: var(--text-dark);
+}
+
+strong {
+  font-weight: bold;
+  font-size: 10px;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-light);
+  gap: 1rem;
+}
+
+body.dark strong {
+  color: var(--text-dark);
+}
+  
 .section-icon {
   color: var(--theme-color);
 }
 
 .section-home {
   padding: 20px;
-  border-radius: 20px;
+  border-radius: var(--radius);
+}
+
+.section-home h2 {
+  margin-bottom: 30px;
+}
+
+.info-boxes h3 {
+  font-size: 15px;
 }
 
 .header-img {
@@ -160,29 +194,23 @@ body.dark p {
 
 /* MEMBER GRID */
 
-#member-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  min-height: 420px; 
-  transition: all 0.3s ease;
-}
-
 .member-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  min-height: 420px; 
+  transition: all color 0.3s ease;
 }
 
 .member-card {
-  height: 200px; 
+  height: 240px; 
   flex-direction: column;
   text-align: center;
   padding: 0.5rem 0.5rem 1rem;
   background-color: var(--bg-light);
   border-radius: var(--radius);
   box-shadow: var(--shadow-out-light);
-  transition: background-color 0.3s;
+  transition: all color 0.3s ease;
 }
 
 body.dark .member-card {
@@ -221,13 +249,29 @@ body.dark .member-role {
   color: var(--text-light);
   background-color: var(--bg-light);
   padding: 2px 6px;
-  border-radius: 12px;
   display: inline-block;
 }
 
 body.dark .member-status {
   color: var(--text-dark);
   background-color: var(--bg-dark);
+}
+
+.member-socials {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.member-socials a {
+  color: var(--theme-color);
+  font-size: 1rem;
+  transition: all color 0.3s ease;
+}
+
+.member-socials a:hover {
+  color: #555;
 }
 
 .pagination-controls {
@@ -260,12 +304,13 @@ body.dark .member-status {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
+
 .program-card {
   text-align: center;
   border-radius: var(--radius);
   background-color: var(--bg-light);
   box-shadow: var(--shadow-out-light);
-  transition: background-color 0.3s;
+  transition: all color 0.3s ease;
 }
 
 body.dark .program-card {
@@ -280,11 +325,9 @@ body.dark .program-card {
   margin-bottom: 0.5rem;
 }
 
-.program-card h2 {
+.program-card h3 {
   font-size: 10px;
   font-weight: 700;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
   color: var(--theme-color);
 }
 
@@ -302,7 +345,7 @@ body.dark .program-card {
   border-radius: var(--radius);
   box-shadow: var(--shadow-out-light);
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: all color 0.3s ease;
   cursor: pointer;
 }
 
@@ -350,7 +393,7 @@ body.dark .contact-form {
   background: var(--bg-light);
   color: var(--text-light);
   box-shadow: var(--shadow-inset-light);
-  transition: all 0.2s ease-in-out;
+  transition: all color 0.3s ease;
 }
 
 body.dark .contact-form input,
@@ -393,7 +436,7 @@ body.dark .contact-form textarea:active {
   background: var(--bg-light);
   box-shadow: var(--shadow-out-light);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all color 0.3s ease;
 }
 
 body.dark .contact-form button {
@@ -433,7 +476,7 @@ body.dark .contact-form button:active {
   border-radius: var(--radius);
   box-shadow: var(--shadow-out-light);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all color 0.3s ease;
 }
 body.dark .pop-btn {
   background: var(--bg-dark);
@@ -631,221 +674,110 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-
-  .settings-panel {
-    width: 170px;
-  }
 }
 
-/* ===== MODE TABLET ===== */
+/* ===== MODE DEKSTOP ===== */
 
-@media (min-width: 641px) and (max-width: 740px) {
+@media (min-width: 641px) {
+
   body {
-    padding: 1rem;
-    min-height: 120vh;
+    padding: 2rem 3rem; 
+    min-height: 140vh;
+  }
+  
+  h2 {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  
+  h3 {
+    font-weight: bold;
+    font-size: 8px;
+  }
+  
+  p { 
+    font-weight: 400;
+    font-size: 8px;
+  }
+  
+  span { 
+    font-weight: 400;
+    font-size: 8px;
+  }
+  
+  strong { 
+    font-weight: bold;
+    font-size: 8px;
+  }
+  
+  .info-boxes h3 {
+    font-size: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .header-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+    margin-bottom: 20px;
   }
 
-h2 {
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 24px;
-  color: var(--theme-color);
-}
-
-.section-icon {
-  color: var(--theme-color);
-}
-
-p {
-  font-size: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: var(--text-light);
-}
-
-body.dark p {
-  color: var(--text-dark);
-}
-
-.section-home {
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.section-home h2 {
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 24px;
-  color: var(--theme-color);
-}
-
-.header-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.contact-info i {
-  gap: 1rem;
-  margin-right: 10px;
-}
+  .contact-info i {
+    gap: 1rem;
+    margin-right: 10px;
+  }
 
   #member-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     min-height: 420px; 
-    transition: all 0.3s ease;
+    transition: all color 0.3s ease;
   }
   
   .member-card {
-    height: 220px; 
+    height: 240px; 
     flex-direction: column;
     text-align: center;
     padding: 0.5rem 0.5rem 1rem;
     background-color: var(--bg-light);
     border-radius: var(--radius);
     box-shadow: var(--shadow-out-light);
-    transition: background-color 0.3s;
+    transition: all color 0.3s ease;
+  }
+  
+  .member-card span {
+    font-size: 8px;
   }
 
   .program-grid,
   .member-grid,
   .documentation-grid {
+    display: grid;
+    flex-direction: column;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 
   .settings-panel {
-    width: 240px;
+    width: 175px;
+    min-height: 100%;    
   }
 
   .floating-settings {
-    top: 70px;
-    right: 70px;
+    top: 50px;
+    right: 65px;
     font-size: 20px;
     padding: 20px;
   }
 
-  .member-card {
-    height: 220px;
-  }
-
   .popup-content {
-    width: 60%;
-    max-width: 70%;
+    width: 50%;
+    max-width: 65%;
     max-height: 90vh;
     overflow-y: auto;
   }
 }
 
-/* ===== MODE DESKTOP ===== */
-
-@media (min-width: 741px) {
-  body {
-    padding: 1rem;
-    min-height: 100vh;
-  }
-  
-h2 {
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 24px;
-  color: var(--theme-color);
-}
-
-.section-icon {
-  color: var(--theme-color);
-}
-
-p {
-  font-size: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: var(--text-light);
-}
-
-body.dark p {
-  color: var(--text-dark);
-}
-
-.section-home {
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.section-home h2 {
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 24px;
-  color: var(--theme-color);
-}
-
-.header-img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.contact-info i {
-  gap: 1rem;
-  margin-right: 10px;
-}
-  
-  #member-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    min-height: 420px; 
-    transition: all 0.3s ease;
-  }
-  
-  .member-card {
-    height: 220px; 
-    flex-direction: column;
-    text-align: center;
-    padding: 0.5rem 0.5rem 1rem;
-    background-color: var(--bg-light);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-out-light);
-    transition: background-color 0.3s;
-  }
-
-  .program-grid,
-  .member-grid,
-  .documentation-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-
-  .settings-panel {
-    width: 280px;
-  }
-
-  .popup-content {
-    width: 40%;
-    max-width: 60%;
-  }
-}

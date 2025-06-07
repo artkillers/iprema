@@ -81,75 +81,75 @@ document.addEventListener("copy", e => e.preventDefault());
 
 const members = [
   // DEWAN SENIOR
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ustad Iskandar", role: "Dewan Senior", status: "Pembina" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Hasrudi Arsyad", role: "Dewan Senior", status: "Pembina" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ramdani Tajjuddin", role: "Dewan Senior", status: "Pembina" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Fachmi Azis", role: "Dewan Senior", status: "Pembina" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhaemin", role: "Dewan Senior", status: "Pembina" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Fachri Azis", role: "Dewan Senior", status: "Pembina" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Asfar Ukkas", role: "Dewan Senior", status: "Pembina" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Irfandi Anas", role: "Dewan Senior", status: "Pembina" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ustad Iskandar", role: "Dewan Senior", status: "Pembina", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Hasrudi Arsyad", role: "Dewan Senior", status: "Pembina", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ramdani Tajjuddin", role: "Dewan Senior", status: "Pembina", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Fachmi Azis", role: "Dewan Senior", status: "Pembina", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhaemin", role: "Dewan Senior", status: "Pembina", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Fachri Azis", role: "Dewan Senior", status: "Pembina", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Asfar Ukkas", role: "Dewan Senior", status: "Pembina", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Irfandi Anas", role: "Dewan Senior", status: "Pembina", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
 
   // PENGURUS INTI
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Alief Fadel Muhammad", role: "Ketua Umum", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Rifky", role: "Ketua I", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ayyubi Rabbani Aziz", role: "Ketua II", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Hadriani Rizky Amalia", role: "Sekretaris Umum", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Arina Rezky Juniastari", role: "Sekretaris I", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh. Rafliyansyah", role: "Sekretaris II", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Anisa Kalista Nur", role: "Bendahara", status: "Pengurus" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "St. Nur Azizah", role: "Wakil Bendahara", status: "Pengurus" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Alief Fadel Muhammad", role: "Ketua Umum", status: "Pengurus", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Rifky", role: "Ketua I", status: "Pengurus", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ayyubi Rabbani Aziz", role: "Ketua II", status: "Pengurus", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Hadriani Rizky Amalia", role: "Sekretaris Umum", status: "Pengurus", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Arina Rezky Juniastari", role: "Sekretaris I", status: "Pengurus", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh. Rafliyansyah", role: "Sekretaris II", status: "Pengurus", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Anisa Kalista Nur", role: "Bendahara", status: "Pengurus", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "St. Nur Azizah", role: "Wakil Bendahara", status: "Pengurus", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
 
   // BIDANG DAKWAH
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Agung Sulo", role: "Dakwah", status: "Koordinator" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Agil Fauzan", role: "Dakwah", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Al Mudatsir", role: "Dakwah", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Syaiful Iskandar", role: "Dakwah", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "M Iqbal Irwan", role: "Dakwah", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Agung Sulo", role: "Dakwah", status: "Koordinator", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Agil Fauzan", role: "Dakwah", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Al Mudatsir", role: "Dakwah", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Syaiful Iskandar", role: "Dakwah", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "M Iqbal Irwan", role: "Dakwah", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
 
   // BIDANG PENDIDIKAN
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sitti Latifah N", role: "Pendidikan", status: "Koordinator" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Aidil Bintang", role: "Pendidikan", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Fahri Husaini", role: "Pendidikan", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Haryati Rina", role: "Pendidikan", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nur Irma Sari", role: "Pendidikan", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sitti Latifah N", role: "Pendidikan", status: "Koordinator", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Aidil Bintang", role: "Pendidikan", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Fahri Husaini", role: "Pendidikan", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Haryati Rina", role: "Pendidikan", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nur Irma Sari", role: "Pendidikan", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
 
   // BIDANG KEWIRAUSAHAAN
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nurul Zaskia Azizah", role: "Kewirausahaan", status: "Koordinator" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Fauzan Ofansyah", role: "Kewirausahaan", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Dian Almahri", role: "Kewirausahaan", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Aqilah Syahrani", role: "Kewirausahaan", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nawal Majida", role: "Kewirausahaan", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nurul Zaskia Azizah", role: "Kewirausahaan", status: "Koordinator", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Fauzan Ofansyah", role: "Kewirausahaan", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Dian Almahri", role: "Kewirausahaan", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Aqilah Syahrani", role: "Kewirausahaan", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Nawal Majida", role: "Kewirausahaan", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
 
   // BIDANG HUMAS
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhammad Arsy Firdaus", role: "Humas", status: "Koordinator" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Rahman", role: "Humas", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Iswandi Ajis Baco S.E", role: "Humas", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Abdul Wahab Kemal", role: "Humas", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Febriadi Bachtiar", role: "Humas", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhammad Arsy Firdaus", role: "Humas", status: "Koordinator", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Rahman", role: "Humas", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Iswandi Ajis Baco S.E", role: "Humas", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Abdul Wahab Kemal", role: "Humas", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Febriadi Bachtiar", role: "Humas", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
 
   // BIDANG PDD
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Arman Maulana", role: "PDD", status: "Koordinator" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Am Fadel Aziz", role: "PDD", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Takdir Haris", role: "PDD", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andas Abbas", role: "PDD", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Nur Indah Sulo", role: "PDD", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Arman Maulana", role: "PDD", status: "Koordinator", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Am Fadel Aziz", role: "PDD", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Takdir Haris", role: "PDD", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andas Abbas", role: "PDD", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andi Nur Indah Sulo", role: "PDD", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
 
   // BIDANG OLAHRAGA DAN SENI
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhammad Iman Syahudi", role: "Olahraga & Seni", status: "Koordinator" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Ricky", role: "Olahraga & Seni", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sulkifli", role: "Olahraga & Seni", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Syafiradi", role: "Olahraga & Seni", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Safaruddin", role: "Olahraga & Seni", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Yusril Aksan", role: "Olahraga & Seni", status: "Anggota" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muhammad Iman Syahudi", role: "Olahraga & Seni", status: "Koordinator", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Ricky", role: "Olahraga & Seni", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sulkifli", role: "Olahraga & Seni", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Syafiradi", role: "Olahraga & Seni", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Safaruddin", role: "Olahraga & Seni", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Muh Yusril Aksan", role: "Olahraga & Seni", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
 
   // BIDANG PENANGGULANGAN BENCANA
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sunaryo", role: "Penanggulangan Bencana", status: "Koordinator" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Siti Wahyuni", role: "Penanggulangan Bencana", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Yusuf Saputra", role: "Penanggulangan Bencana", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andy Aksyal Nurdiansyah", role: "Penanggulangan Bencana", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Agus Salim", role: "Penanggulangan Bencana", status: "Anggota" },
-  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ismail (Abay)", role: "Penanggulangan Bencana", status: "Anggota" }
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Sunaryo", role: "Penanggulangan Bencana", status: "Koordinator", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Siti Wahyuni", role: "Penanggulangan Bencana", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Yusuf Saputra", role: "Penanggulangan Bencana", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Andy Aksyal Nurdiansyah", role: "Penanggulangan Bencana", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Agus Salim", role: "Penanggulangan Bencana", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" },
+  { photo: "https://cdn-icons-png.flaticon.com/512/149/149071.png", name: "Ismail (Abay)", role: "Penanggulangan Bencana", status: "Anggota", instagram: "https://instagram.com/username", facebook: "https://facebook.com/username", whatsapp: "https://wa.me/whatsapp", email: "username@email.com" }
 ];
 
 document.getElementById("totalAnggota").textContent = `( ${members.length} )`;
@@ -170,11 +170,17 @@ function renderMembers() {
     const card = document.createElement('div');
     card.className = 'member-card box';
     card.innerHTML = `
-      <img src="${member.photo || defaultPhoto}" alt="${member.name}" class="member-photo" />
-      <h3 class="member-name">${member.name}</h3>
-      <p class="member-role">${member.role}</p>
-      <span class="member-status">${member.status}</span>
-    `;
+  <img src="${member.photo || defaultPhoto}" alt="${member.name}" class="member-photo" />
+  <h3 class="member-name">${member.name}</h3>
+  <p class="member-role">${member.role}</p>
+  <span class="member-status">${member.status}</span>
+  <div class="member-socials">
+    ${member.instagram ? `<a href="${member.instagram}" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>` : ""}
+    ${member.facebook ? `<a href="${member.facebook}" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>` : ""}
+    ${member.whatsapp ? `<a href="${member.whatsapp}" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>` : ""}
+    ${member.email ? `<a href="mailto:${member.email}" title="Email"><i class="fas fa-envelope"></i></a>` : ""}
+  </div>
+  `;
     container.appendChild(card);
   });
 
@@ -281,7 +287,7 @@ async function fetchWeather() {
     const weatherInfo = document.getElementById("weather-info");
 
     // Icon default sementara
-    weatherInfo.innerHTML = ` ${temp}°C `;
+    weatherInfo.innerHTML = ` ${temp}° C `;
   } catch (e) {
     document.getElementById("weather-info").textContent = "Gagal memuat cuaca.";
   }
@@ -295,7 +301,7 @@ function updateDateTime() {
   const timeStr = now.toLocaleTimeString('id-ID');
 
   const dateTime = document.getElementById("date-time");
-  dateTime.innerHTML = ` ${dateStr} `;
+  dateTime.innerHTML = ` ${timeStr}<br>${dateStr} `;
 }
 
 setInterval(updateDateTime, 1000);
